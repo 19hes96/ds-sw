@@ -1,13 +1,13 @@
-package de.tekup.demo.data;
+package de.tekup.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WhiteTestSoapApplication {
+public class WhiteTestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WhiteTestSoapApplication.class, args);
+		SpringApplication.run(WhiteTestApplication.class, args);
 	}
 
 }

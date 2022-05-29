@@ -17,24 +17,15 @@ targetNamespace="http://www.tekup.de/soap/models/whitetest" elementFormDefault="
                 <xsd:element name="student" type="tns:Student"/>
                 <xsd:element name="exam" type="tns:Exam"/>
                 <xsd:element name="date" type="xsd:dateTime"/>
-                <xsd:element name="badRequests" maxOccurs="unbounded" type="xsd:string"/>
-                
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
- <xsd:complexType name="Address">
-    	<xsd:sequence>
-    		<xsd:element name="street" type="xsd:string"/>
-    		<xsd:element name="city" type="xsd:string"/>
-    		<xsd:element name="poste-code" type="xsd:int"/>
-    	</xsd:sequence>
-    </xsd:complexType>
  
     <xsd:complexType name="Student">
         <xsd:sequence>
 			<xsd:element name="id" type="xsd:int"/>
             <xsd:element name="name" type="xsd:string"/>
-            <xsd:element name="address" type="tns:Address"/>
+            <xsd:element name="address" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
 	

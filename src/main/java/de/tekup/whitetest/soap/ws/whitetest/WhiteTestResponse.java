@@ -2,14 +2,14 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.7 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2021.05.22 à 02:19:14 PM WAT 
+// Généré le : 2021.05.16 à 12:04:06 AM CEST 
 //
 
 
-package de.tekup.soap.models.whitetest;
+package de.tekup.whitetest.soap.ws.whitetest;
 
-import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -32,7 +32,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="student" type="{http://www.tekup.de/soap/models/whitetest}Student"/>
  *         &lt;element name="exam" type="{http://www.tekup.de/soap/models/whitetest}Exam"/>
  *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
- *         &lt;element name="badRequests" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -45,8 +44,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "", propOrder = {
     "student",
     "exam",
-    "date",
-    "badRequests"
+    "date"
 })
 @XmlRootElement(name = "WhiteTestResponse")
 public class WhiteTestResponse {
@@ -58,8 +56,6 @@ public class WhiteTestResponse {
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar date;
-    @XmlElement(required = true)
-    protected List<String> badRequests;
 
     /**
      * Obtient la valeur de la propriété student.
@@ -100,13 +96,13 @@ public class WhiteTestResponse {
     /**
      * Définit la valeur de la propriété exam.
      * 
-     * @param value
+     * @param availableExams
      *     allowed object is
      *     {@link Exam }
      *     
      */
-    public void setExam(Exam value) {
-        this.exam = value;
+    public void setExam(List<Exam> availableExams) {
+        this.exam = (Exam) availableExams;
     }
 
     /**
@@ -133,33 +129,8 @@ public class WhiteTestResponse {
         this.date = value;
     }
 
-    /**
-     * Gets the value of the badRequests property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the badRequests property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getBadRequests().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getBadRequests() {
-        if (badRequests == null) {
-            badRequests = new ArrayList<String>();
-        }
-        return this.badRequests;
+    public void setExam(Exam value) {
+        this.exam = value;
     }
 
 }
